@@ -26,14 +26,13 @@ const ReducerTodo = (state = initial_state, action) => {
         {
           id: newstate.tasks.length + 1,
           task: action.payload,
-          completed: false,
+          completed: true,
         },
       ];
       break;
+      case "delete-element":
+        newstate.tasks= newstate.tasks.filter((t,i)=>i!=action.payload)
   }
-  //the error for not being aded is
-  // 's' mising on newstate.tasks
-  // another error is dispatch name was incorrect missing 'e'
   return newstate;
 };
 export default ReducerTodo;
