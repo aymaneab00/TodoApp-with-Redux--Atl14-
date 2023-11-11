@@ -30,11 +30,16 @@ const ReducerTodo = (state = initial_state, action) => {
         },
       ];
       break;
-      case "delete-element":
-        newstate.tasks= newstate.tasks.filter((t,i)=>i!=action.payload)
+    case "delete-element":
+      newstate.tasks = newstate.tasks.filter((t, i) => i != action.payload);
+      break;
+    case "modify-element":
+      newstate.tasks = newstate.tasks.map((t, i) =>
+        action.payload != i ? t : { ...t, completed: !t.completed });
         break;
-      case "modify-element":
-        newstate.tasks= newstate.tasks.map((t,i)=>action.payload!=i ? t : {...t, completed:!t.completed})
+    case "clear-all":
+      newstate.tasks=[]
+      break;
   }
   return newstate;
 };
