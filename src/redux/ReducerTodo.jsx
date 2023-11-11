@@ -40,6 +40,9 @@ const ReducerTodo = (state = initial_state, action) => {
     case "clear-all":
       newstate.tasks=[]
       break;
+      case "modify-all":
+        newstate.tasks=newstate.tasks.map(t=>({...t,completed:true}))
+        
   }
   return newstate;
 };

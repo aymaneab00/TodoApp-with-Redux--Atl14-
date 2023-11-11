@@ -16,6 +16,9 @@ export default function ListeTask() {
   function clearall() {
     dispatch ({type:"clear-all"})
   }
+  function modifalltocomplete() {
+    dispatch ({type:"modify-all"})
+  }
   return (
     <div>
       {
@@ -35,7 +38,8 @@ export default function ListeTask() {
       }
       <div className="buttons">
         <button onClick={clearall}>Clear All</button>
-        <button>Modify all the tasks to complete tasks</button>
+        <button onClick={modifalltocomplete}>Modify all the tasks to complete tasks</button>
+        <button>Modify all the tasks to no-complete tasks</button>
         <button>delete all tasks completed</button>
         <button>delete all tasks no-completed</button>
       </div>
