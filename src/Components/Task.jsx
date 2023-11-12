@@ -3,7 +3,7 @@ import React from "react";
 export default function Task({ tache, deletelement, modifyelement }) {
   return (
     <div>
-      <div>
+      <div className="task">
         {tache.completed ? (
           <div className="completed">
             {tache.task}{" "}
