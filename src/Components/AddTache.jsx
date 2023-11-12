@@ -7,8 +7,14 @@ export default function AddTache() {
   const dispatch = useDispatch();
   function addtask(e) {
     e.preventDefault();
-    dispatch({ type: "add-tache", payload: newtask });
-    setnewtask("");
+    if (newtask.trim() !== "") {
+      dispatch({ type: "add-tache", payload: newtask });
+      setnewtask("");
+      document.getElementById("input").focus();
+    } else {
+      alert("fill the champ then click the button to add task");
+      document.getElementById("input").focus();
+    }
   }
   return (
     <form onSubmit={addtask}>
@@ -17,6 +23,7 @@ export default function AddTache() {
         value={newtask}
         onChange={(e) => setnewtask(e.target.value)}
         placeholder="Donner une description "
+        id="input"
       />
       <button>➕</button>
     </form>
