@@ -14,10 +14,19 @@ export default function ListeTask() {
     dispatch({ type: "modify-element", payload: id });
   }
   function clearall() {
-    dispatch ({type:"clear-all"})
+    dispatch({ type: "clear-all" });
   }
   function modifalltocomplete() {
-    dispatch ({type:"modify-all"})
+    dispatch({ type: "modify-all" });
+  }
+  function modifyalltonocomplete() {
+    dispatch({ type: "modify-nocomplete" });
+  }
+  function delettenocomplete(){
+    dispatch({type:"delete-nocomplette"})
+  }
+  function delettecomplete(){
+    dispatch({type:"delete-complette"})
   }
   return (
     <div>
@@ -38,10 +47,14 @@ export default function ListeTask() {
       }
       <div className="buttons">
         <button onClick={clearall}>Clear All</button>
-        <button onClick={modifalltocomplete}>Modify all the tasks to complete tasks</button>
-        <button>Modify all the tasks to no-complete tasks</button>
-        <button>delete all tasks completed</button>
-        <button>delete all tasks no-completed</button>
+        <button onClick={modifalltocomplete}>
+          Modify all the tasks to complete tasks
+        </button>
+        <button onClick={modifyalltonocomplete}>
+          Modify all the tasks to no-complete tasks
+        </button>
+        <button onClick={delettecomplete}>delete all tasks completed</button>
+        <button onClick={delettenocomplete}>delete all tasks no-completed</button>
       </div>
     </div>
   );
