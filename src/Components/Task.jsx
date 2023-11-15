@@ -10,7 +10,7 @@ export default function Task({ tache, deletelement, modifyelement }) {
   }
  function  handlemodif (id){
   dispatch({ type: "modify-text", payload1: id , payload2: modifiedtask});
-
+  setdisplay(!displaybtn);
 }
 
   return (
