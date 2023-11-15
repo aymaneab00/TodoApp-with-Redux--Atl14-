@@ -53,6 +53,9 @@ const ReducerTodo = (state = initial_state, action) => {
       case "delete-complette":
         newstate.tasks = newstate.tasks.filter((t) => t.completed === false);
         break;
+        case 'modify-text' :
+      newstate.tasks= newstate.tasks.map((t)=>{ return t.id===action.payload1 ? {id:t.id, task: action.payload2,completed:t.completed}: t;})
+        break;
   }
   return newstate;
 };
