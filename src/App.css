@@ -1,17 +1,57 @@
-.task{
+.App{
+text-align: center;}
+.task {
+   margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.list{
+  margin: 10px ;
+  border: 1px black solid;
+  height: auto;
+  width: 90%;
+padding: 10px;
+  justify-content: center;
+}
+.task .completed{
+  display: flex;
+  flex-direction: row;
+  text-decoration: line-through;
+  gap: 5px;
 
 }
-.completed {
-  
-  text-decoration: line-through;
-
+.task .no-completed{
+  display: flex;
+  flex-direction: row;
+gap: 5px;
 }
 button{
   color: aliceblue;
-  background-color: black;
+  background-color: blue;
   border-radius: 13%;
 cursor: pointer;
 }
 button:hover{
   opacity: 0.5;
+}
+.add-tache{
+  margin-top: 20px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 5px;
+}
+.add-tache input{
+  width: 40%;
+}
+.add-tache button{
+  width: auto
+}
+.buttons{
+  margin: 5px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 5px;
 }

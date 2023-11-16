@@ -8,10 +8,11 @@ export default function Task({ tache, deletelement, modifyelement }) {
   function handlediting() {
     setdisplay(!displaybtn);
   }
- function  handlemodif (id){
-  dispatch({ type: "modify-text", payload1: id , payload2: modifiedtask});
-  setdisplay(!displaybtn);
-}
+  function handlemodif(id) {
+    if (modifiedtask.trim()==='') return alert('n edite pas avec une chaine vide ');
+    dispatch({ type: "modify-text", payload1: id, payload2: modifiedtask });
+    setdisplay(!displaybtn);
+  }
 
   return (
     <div>
@@ -30,12 +31,12 @@ export default function Task({ tache, deletelement, modifyelement }) {
                   placeholder={tache.task}
                   onChange={(e) => setmodified(e.target.value)}
                 />
-                <button onClick={()=>handlemodif(tache.id)}>edit</button>
+                <button onClick={() => handlemodif(tache.id)}>edit</button>
               </div>
             )}
           </div>
         ) : (
-          <div className="">
+          <div className="no-completed">
             {tache.task} <button onClick={() => modifyelement()}>✅</button>
             <button onClick={() => deletelement()}>❌</button>
             <button onClick={handlediting}>edit text </button>{" "}
@@ -48,7 +49,7 @@ export default function Task({ tache, deletelement, modifyelement }) {
                   placeholder={tache.task}
                   onChange={(e) => setmodified(e.target.value)}
                 />
-                <button onClick={()=>handlemodif(tache.id)}>edit</button>
+                <button onClick={() => handlemodif(tache.id)}>edit</button>
               </div>
             )}{" "}
           </div>

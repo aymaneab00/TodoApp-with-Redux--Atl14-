@@ -35,7 +35,7 @@ const ReducerTodo = (state = initial_state, action) => {
       break;
     case "modify-element":
       newstate.tasks = newstate.tasks.map((t, i) =>
-        action.payload != i ? t : { ...t, completed: !t.completed }
+        action.payload != i ? t : { ...t, completed: !t.completed }  //action payload here is the id getted from other component
       );
       break;
     case "clear-all":

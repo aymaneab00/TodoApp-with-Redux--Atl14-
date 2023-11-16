@@ -17,7 +17,7 @@ export default function AddTache() {
     }
   }
   return (
-    <form onSubmit={addtask}>
+    <form onSubmit={addtask} className="add-tache">
       <input
         type="text"
         value={newtask}

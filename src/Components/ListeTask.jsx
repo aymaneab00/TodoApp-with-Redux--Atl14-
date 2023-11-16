@@ -28,8 +28,10 @@ export default function ListeTask() {
   function delettecomplete(){
     dispatch({type:"delete-complette"})
   }
+
+  
   return (
-    <div>
+    <div className="list">
       {
         Liste.map((t, i) => {
           // console.log('current task')
