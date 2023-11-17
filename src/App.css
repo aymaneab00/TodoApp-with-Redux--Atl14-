@@ -9,7 +9,8 @@ text-align: center;}
   align-content: center;
 }
 .list{
-  margin: 10px ;
+margin-top: 10px;
+ margin-left: 5%;
   /* border: 1px black solid; */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: auto;
