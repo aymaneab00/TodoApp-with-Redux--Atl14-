@@ -1,14 +1,17 @@
 .App{
 text-align: center;}
 .task {
-   margin-top: 5px;
+  padding: 10px;
+   margin-top: 40px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
 }
 .list{
   margin: 10px ;
-  border: 1px black solid;
+  /* border: 1px black solid; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: auto;
   width: 90%;
 padding: 10px;
@@ -19,14 +22,13 @@ padding: 10px;
   flex-direction: row;
   text-decoration: line-through;
   gap: 5px;
-
 }
 .task .no-completed{
   display: flex;
   flex-direction: row;
 gap: 5px;
 }
-button{
+/* button{
   color: aliceblue;
   background-color: blue;
   border-radius: 13%;
@@ -34,7 +36,7 @@ cursor: pointer;
 }
 button:hover{
   opacity: 0.5;
-}
+} */
 .add-tache{
   margin-top: 20px;
 display: flex;
@@ -49,9 +51,64 @@ gap: 5px;
   width: auto
 }
 .buttons{
-  margin: 5px;
+  margin: 20px;
 display: flex;
 flex-direction: row;
 justify-content: center;
 gap: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+button:hover,
+button:focus {
+  background-color: #07c;
+}
+
+button:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+button:active {
+  background-color: #0064bd;
+  box-shadow: none;
 }

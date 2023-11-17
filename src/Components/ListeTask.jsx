@@ -22,26 +22,28 @@ export default function ListeTask() {
   function modifyalltonocomplete() {
     dispatch({ type: "modify-nocomplete" });
   }
-  function delettenocomplete(){
-    dispatch({type:"delete-nocomplette"})
+  function delettenocomplete() {
+    dispatch({ type: "delete-nocomplette" });
   }
-  function delettecomplete(){
-    dispatch({type:"delete-complette"})
+  function delettecomplete() {
+    dispatch({ type: "delete-complette" });
   }
 
-  
   return (
     <div className="list">
+      
       {
         Liste.map((t, i) => {
           // console.log('current task')
           return (
-            <Task
-              tache={t}
-              key={i}
-              deletelement={() => deletelement(i)}
-              modifyelement={() => modifyelement(i)}
-            />
+            <div className="list-container">
+              <Task
+                tache={t}
+                key={i}
+                deletelement={() => deletelement(i)}
+                modifyelement={() => modifyelement(i)}
+              />
+            </div>
           );
         })
         //  i found that the error for the list not showing is
@@ -56,7 +58,9 @@ export default function ListeTask() {
           Modify all the tasks to no-complete tasks
         </button>
         <button onClick={delettecomplete}>delete all tasks completed</button>
-        <button onClick={delettenocomplete}>delete all tasks no-completed</button>
+        <button onClick={delettenocomplete}>
+          delete all tasks no-completed
+        </button>
       </div>
     </div>
   );
